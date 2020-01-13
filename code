@@ -1,0 +1,222 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+	//setup and declaration
+	int option;
+	int addend1; 
+	int addend2;
+	unsigned int subend1;
+	unsigned int subend2;
+	int multend1;
+	int multend2;
+	int dividend1;
+	int dividend2;
+	int squareroot;
+	int cuberoot;
+	float cuberootresult;
+	float power;
+	float powerresult;
+	cout << "Press 1 for addition, press 2 for subtraction, press 3 for multiplication, press 4 for division, press 5 for square root, press 6 for cube root, or press 7 for power\n";
+	cin >> option;
+
+
+	if (option == 1) {
+		/*
+		
+			Adding
+		
+		
+		*/
+		cout << "Welcome to the addition only calculator \n \n";
+		cout << "Enter a number \n";
+		cin >> addend1;
+		cout << "Enter another number \n";
+		cin >> addend2;
+		int sum = addend1 + addend2;
+		int fourthVar = sum % 2;
+		cout << "The sum of those two numbers are " << sum;
+		if (fourthVar == 0) {
+			cout << "\nThe sum is even" << endl;
+		}
+		else {
+			cout << "\nThe sum is odd" << endl;
+		}
+		int i, m = 0, flag = 0;
+		m = sum / 2;
+		for (i = 2; i <= m; i++)
+		{
+			if (sum % i == 0)
+			{
+				cout << "The sum is not Prime." << endl;
+				flag = 1;
+				break;
+			}
+		}
+		if (flag == 0)
+			cout << "Number is Prime." << endl;
+	}
+	if (option == 2)
+	{
+		/*
+
+		Subtracting part
+
+	   */
+		cout << "Welcome to the subtraction only calculator \n \n";
+		cout << "Enter a number \n";
+		cin >> subend1;
+		cout << "Enter another number \n";
+		cin >> subend2;
+		int difference = subend1 - subend2;
+		int fourthVar = difference % 2;
+		cout << "The difference of those two numbers are " << difference;
+		if (fourthVar == 0) {
+			cout << "\nThe difference is even" << endl;
+		}
+		else {
+			cout << "\nThe difference is odd" << endl;
+		}
+		int i, m = 0, flag = 0;
+		m = difference / 2;
+		for (i = 2; i <= m; i++)
+		{
+			if (difference % i == 0)
+			{
+				cout << "The difference is not Prime." << endl;
+				flag = 1;
+				break;
+			}
+		}
+		if (flag == 0)
+			cout << "The difference is Prime." << endl;
+	}
+	if (option == 3)
+	{
+		/*
+
+		Multiplying part
+
+	   */
+		cout << "Welcome to the multiplication only calculator \n \n";
+		cout << "Enter a number \n";
+		cin >> multend1;
+		cout << "Enter another number \n";
+		cin >> multend2;
+		int product = multend1 * multend2;
+		int fourthVar = product % 2;
+		cout << "The product of those two numbers are " << product;
+		if (fourthVar == 0) {
+			cout << "\nThe product is even" << endl;
+		}
+		else {
+			cout << "\nThe product is odd" << endl;
+		}
+
+		int i, m = 0, flag = 0;
+		m = product / 2;
+		for (i = 2; i <= m; i++)
+		{
+			if (product % i == 0)
+			{
+				cout << "The product is not Prime." << endl;
+				flag = 1;
+				break;
+			}
+		}
+		if (flag == 0)
+			cout << "The product is Prime." << endl;
+
+	}
+
+	if (option == 4)
+	{
+		/*
+
+		Division part
+
+	   */
+		cout << "Welcome to the division only calculator \n \n";
+		cout << "Enter a number \n";
+		cin >> dividend1;
+		cout << "Enter another number \n";
+		cin >> dividend2;
+		int quotient = dividend1 / dividend2;
+		int fourthVar = quotient % 2;
+		cout << "The quotient of those two numbers are " << quotient;
+		if (fourthVar == 0) {
+			cout << "\nThe quotient is even" << endl;
+		}
+		else {
+			cout << "\nThe quotient is odd" << endl;
+		}
+
+		int i, m = 0, flag = 0;
+		m = quotient / 2;
+		for (i = 2; i <= m; i++)
+		{
+			if (quotient % i == 0)
+			{
+				cout << "The quotient is not Prime." << endl;
+				flag = 1;
+				break;
+			}
+		}
+		if (flag == 0)
+			cout << "The quotient is Prime." << endl;
+
+
+	}
+	if (option == 5)
+	{
+		/*
+
+			Square root
+
+
+		*/
+		cout << "Welcome to the squre root only calculator \n \n";
+		cout << "Enter a number \n";
+		cin >> squareroot;
+		float squarerootresult = sqrt(squareroot);
+		cout << "The square root of " << squareroot << " is " << squarerootresult;
+	}
+
+	if (option == 6)
+	{
+		/*
+
+			Cube root
+
+
+		*/
+		cout << "Welcome to the cube root only calculator \n \n";
+		cout << "Enter a number \n";
+		cin >> cuberoot;
+		cuberootresult = cbrt(cuberoot);
+		cout << "The cube root of " << cuberoot << " is " << cuberootresult;
+	}
+	if (option == 7)
+	{
+		/*
+
+			Power
+
+
+		*/
+		float power2;
+		cout << "Welcome to the power only calculator \n \n";
+		cout << "Enter a number \n";
+		cin >> power;
+		cout << "Enter another number \n";
+		cin >> power2;
+		powerresult = pow(power, power2);
+		cout << power << " raised to the power of " << power2 << " is equal to " << powerresult;
+
+
+	}
+
+	return 0;
+}
